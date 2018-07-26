@@ -1,15 +1,6 @@
 package com.gu.team.workingtimecontrol.ui.fragments;
 
-import androidx.databinding.DataBindingUtil;
-import androidx.databinding.ViewDataBinding;
-import androidx.lifecycle.ViewModelProviders;
-
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +8,12 @@ import android.view.ViewGroup;
 import com.gu.team.workingtimecontrol.R;
 import com.gu.team.workingtimecontrol.databinding.TimeControlFragmentBinding;
 import com.gu.team.workingtimecontrol.viewmodels.TimeControlViewModel;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProviders;
 
 public class TimeControlFragment extends Fragment {
 
@@ -40,8 +37,5 @@ public class TimeControlFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(TimeControlViewModel.class);
         binding.setModel(mViewModel);
-
-
     }
-
 }
