@@ -12,6 +12,9 @@ public class User {
     private String department;
     private boolean manager;
 
+    public User() {
+    }
+
     public User(String firstName, String lastName, String middleName, String login, String password, int pinCode, String position, String department, boolean manager) {
         this.firstName = firstName;
         this.lastName = lastName;

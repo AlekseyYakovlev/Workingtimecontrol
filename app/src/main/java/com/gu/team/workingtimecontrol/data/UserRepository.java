@@ -14,7 +14,7 @@ public class UserRepository {
         return ourInstance;
     }
 
-    public UserRepository() {
+    private UserRepository() {
         setCurrentUser(testUser());
     }
 
@@ -28,8 +28,21 @@ public class UserRepository {
         currentUser.postValue(user);
     }
 
+    public String getPasswordByLogin(String login) {
+        return testUser().getPassword();
+    }
 
-    private User testUser(){
+    public User getUserByLogin(String login) {
+        return testUser();
+    }
+
+    private User testUser() {
         return new User("Ivan", "Ivanov", "Ivanovich", "Ivan_Ivanov", "password", 12345, "CEO", "Administration", true);
     }
- }
+
+    public void saveUser(User user) {
+
+    }
+
+
+}
